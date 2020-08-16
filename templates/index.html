@@ -22,34 +22,27 @@
                 <div class="orange-bar">
                     <div class="orange-juice"></div>
                 </div>
-
                 <div class="left-controls">
                     <div class="buttons">
                         <button id="play-pause"></button>
                         <button class="fas fa-fast-backward" id="fast-backward-btn"></button>
                         <button class="fas fa-fast-forward" id="fast-forward-btn"></button>
                     </div>
-
                     <div class="time-display center">
                         <span id='current-time'>0:00</span>
                         <span id='separator'>/</span>
                         <span id='time-duration'>0:00</span>
                     </div>
                 </div>
-
                 <div class="right-controls">
                     <div class="buttons">
                         <button id='screenSize'></button>
-
                     </div>
-                    
                 </div>
-                
             </div>
         </div>
     </div>
 
     <script src="{{ url_for('static', filename='js/videoPlayer.js') }}"></script>
-
 </body>
 </html>

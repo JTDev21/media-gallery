@@ -113,19 +113,3 @@ video.addEventListener('timeupdate', function()
 });
 
 screenSize_btn.addEventListener("click",toggleFullScreen,false);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
