@@ -1,6 +1,11 @@
 var video = document.querySelector('.video');
 var juice = document.querySelector('.orange-juice');
-var btn = document.getElementById('play-pause');
+
+var video_containter = document.getElementById('video');
+var startStop_btn = document.getElementById('play-pause');
+
+var skipBackward_btn = document.getElementById('fast-backward-btn');
+var skipForward_btn = document.getElementById('fast-forward-btn');
 
 var current_time = document.getElementById("current-time");
 var separator = document.getElementById("separator");
@@ -9,19 +14,35 @@ var time_duration = document.getElementById("time-duration");
 var current_HMS_time = [];
 var video_HMS_time = [];
 
+var skipValue = 10;
+
+var screenSize_btn = document.getElementById('screenSize');
+
 function togglePlayPause() {
     if(video.paused) {
-        btn.className = 'pause';
+        startStop_btn.className = 'pause';
         video.play();
     }
     else {
-        btn.className = 'play';
+        startStop_btn.className = 'play';
         video.pause();
     }
 }
 
-btn.onclick = function() {
+startStop_btn.onclick = function() {
     togglePlayPause();
+};
+
+video_containter.onclick = function() {
+    togglePlayPause();
+};
+
+skipBackward_btn.onclick = function () {
+    video.currentTime -= skipValue;
+};
+
+skipForward_btn.onclick = function () {
+    video.currentTime += skipValue;
 };
 
 function computeTime(time, timeArr) {
@@ -35,16 +56,13 @@ function computeTime(time, timeArr) {
     minutes = minutes.toString();
     seconds = seconds.toString();
 
-    if (hours < 10)
-    {
+    if (hours < 10) {
         hours = "0" + hours;
     }
-    if (minutes < 10 && hours != 0)
-    {
+    if (minutes < 10 && hours != 0) {
         minutes = "0" + minutes;
     }
-    if (seconds < 10)
-    {
+    if (seconds < 10) {
         seconds = "0" + seconds;
     }
 
@@ -71,7 +89,16 @@ function timeDisplay()
     else {
         time_duration.textContent = video_HMS_time[0] + ":" + video_HMS_time[1] + ":" + video_HMS_time[2];
     }
-    
+}
+
+function toggleFullScreen() {
+	if(video.requestFullScreen){
+		video.requestFullScreen();
+	} else if(video.webkitRequestFullScreen){
+		video.webkitRequestFullScreen();
+	} else if(video.mozRequestFullScreen){
+		video.mozRequestFullScreen();
+	}
 }
 
 video.addEventListener('timeupdate', function()
@@ -81,6 +108,24 @@ video.addEventListener('timeupdate', function()
     juice.style.width = juicePos * 100 + "%";
 
     if(video.ended) {
-        btn.className = "play";
+        startStop_btn.className = "play";
     }
-})
+});
+
+screenSize_btn.addEventListener("click",toggleFullScreen,false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

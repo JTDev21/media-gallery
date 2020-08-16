@@ -17,7 +17,7 @@
 <body>
     <div class="container">
         <div class="c-video">
-            <video class="video" src="{{ url_for('static', filename='videos/MV.mp4') }}"></video>
+            <video class="video" id='video' src="{{ url_for('static', filename='videos/MV.mp4') }}"></video>
             <div class="controls">
                 <div class="orange-bar">
                     <div class="orange-juice"></div>
@@ -26,12 +26,23 @@
                 <div class="left-controls">
                     <div class="buttons">
                         <button id="play-pause"></button>
+                        <button class="fas fa-fast-backward" id="fast-backward-btn"></button>
+                        <button class="fas fa-fast-forward" id="fast-forward-btn"></button>
                     </div>
-                    <div class="time-display">
+
+                    <div class="time-display center">
                         <span id='current-time'>0:00</span>
                         <span id='separator'>/</span>
                         <span id='time-duration'>0:00</span>
                     </div>
+                </div>
+
+                <div class="right-controls">
+                    <div class="buttons">
+                        <button id='screenSize'></button>
+
+                    </div>
+                    
                 </div>
                 
             </div>

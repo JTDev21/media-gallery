@@ -2,6 +2,11 @@ body {
     overflow: hidden;
 }
 
+.center {
+    display: block;
+    margin: auto;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -51,7 +56,7 @@ body {
     cursor: pointer;
 }
 
-.buttons button:before {
+#play-pause:before {
     content: '\f144';
     font-family: 'Font Awesome 5 Free';
     width: 30px;
@@ -61,12 +66,21 @@ body {
     color: #fff;
 }
 
-.buttons button.play:before {
+#play-pause.play:before {
     content: '\f144';
 }
 
-.buttons button.pause:before {
+#play-pause.pause:before {
     content: '\f28b';
+}
+
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    width: 30px;
+    height: 25px;
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
 }
 
 .orange-bar {
@@ -88,9 +102,33 @@ body {
     align-content: center;
 }
 
+.right-controls {
+    margin-left: auto;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+}
+
+#screenSize:before {
+    content: '\f2d0';
+    font-family: 'Font Awesome 5 Free';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+}
+
+#screenSize.min:before {
+    content: '\f2d1';
+}
+
+#screenSize.max:before {
+    content: '\f2d0';
+}
+
+
 .time-display {
-    display: block;
-    margin: auto;
     color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
