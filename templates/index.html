@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoPlayer.css') }}">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    
+    <title>HTML5 Custom Video Player</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="c-video">
+            <video class="video" src="{{ url_for('static', filename='videos/MV.mp4') }}"></video>
+            <div class="controls">
+                <div class="orange-bar">
+                    <div class="orange-juice"></div>
+                </div>
+
+                <div class="left-controls">
+                    <div class="buttons">
+                        <button id="play-pause"></button>
+                    </div>
+                    <div class="time-display">
+                        <span id='current-time'>0:00</span>
+                        <span id='separator'>/</span>
+                        <span id='time-duration'>0:00</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/videoPlayer.js') }}"></script>
+
+</body>
+</html>

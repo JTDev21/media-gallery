@@ -1,0 +1,96 @@
+body {
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    position: relative;
+    background: rgb(254, 254, 254);
+    height: 100vh;
+}
+
+.video {
+    width: 100%;
+}
+
+.c-video {
+    display: block;
+    margin: auto;
+
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+.c-video:hover .controls {
+    transform: translateY(0);
+}
+
+.controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%) translateY(-5px);
+    transition: all 0.2s;
+}
+
+.buttons {
+    padding: 10px;
+}
+
+.buttons button {
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.buttons button:before {
+    content: '\f144';
+    font-family: 'Font Awesome 5 Free';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 28px;
+    color: #fff;
+}
+
+.buttons button.play:before {
+    content: '\f144';
+}
+
+.buttons button.pause:before {
+    content: '\f28b';
+}
+
+.orange-bar {
+    height: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(232,232,232, 0.5);
+}
+
+.orange-juice {
+    height: 10px;
+    background-color: orangered;
+}
+
+.left-controls {
+    display: flex;
+    justify-content: left;
+    align-content: center;
+}
+
+.time-display {
+    display: block;
+    margin: auto;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
