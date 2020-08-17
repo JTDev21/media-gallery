@@ -1,0 +1,11 @@
+body {
+    overflow: hidden;
+}
+
+.c-video {
+    display: block;
+    margin: auto;
+
+    width: 100%;
+    max-width: 800px;
+}

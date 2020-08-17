@@ -30,6 +30,7 @@ body {
     position: relative;
     overflow: hidden;
 }
+
 .c-video:hover .controls {
     transform: translateY(0);
 }
