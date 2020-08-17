@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+    <!-- Video.js -->
     <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
-    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mainStyle.css')}}">
@@ -26,13 +27,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Video Gallery</a>
+                    <a class="nav-link" href="{{ url_for('videoPlaylist') }}">Video Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Photo Gallery</a>
+                    <a class="nav-link" href="{{ url_for('photoGallery') }}">Photo Gallery</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,9 +48,11 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
+    <div class="container-fluid my-container">
         {% block content %}
         {% endblock %}
+
+        
     </div>
     
     <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>

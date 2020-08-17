@@ -1,15 +1,21 @@
 {% extends "base.html" %}
-{% block title %} HTML5 Video Player {% endblock %}
+{% block title %} Playlist {% endblock %}
 {% block content %}
+
 <div class="c-video">
-    <video id="current-video" class="video-js" controls preload="auto" poster="{{ url_for('static', filename='posters/7313.jpg') }}" data-setup='{"fluid": true}'>
-            <source src={{ url_for('static', filename=videoPaths[0]) }} />
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a
-                web browser that
-                <a href="https://videojs.com/html5-video-support/" target="_blank"
-                    >supports HTML5 video</a>
-            </p>
+    <video id="current-video" class="video-js" controls preload="auto" type='video/mp4' poster="{{ url_for('static', filename='posters/7313.jpg') }}" data-setup='{"fluid": true}'>
+        <source src="{{ url_for('static', filename='videos/vid.mp4') }}" />
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank"
+                >supports HTML5 video</a>
+        </p>
     </video>
 </div>
+    
+<div class="c-playlist">
+    <img class="center" src="{{url_for('static', filename='posters/7313.jpg') }}" />
+</div>
+
 {% endblock %}

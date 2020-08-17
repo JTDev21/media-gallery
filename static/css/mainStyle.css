@@ -1,11 +1,17 @@
-body {
+/* body {
     overflow: hidden;
-}
+} */
 
-.c-video {
+.center {
     display: block;
     margin: auto;
 
-    width: 100%;
+    width:100%;
     max-width: 800px;
+}
+
+.my-container {
+    display: flex;
+    justify-items: center;
+    border: 3px solid red;
 }
