@@ -1,5 +1,47 @@
 {% extends "base.html" %}
 {% block title %}Photo Gallery{% endblock %}
+{% block headLinks %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/imageStyle.css') }}">
+
+{% endblock %}
+
 {% block content %}
-<!-- <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' /> -->
+<!-- <img src="{{ url_for('static', filename=imagePaths[0]) }}" alt='oof' /> -->
+
+<div class="row">
+        <div class="col-lg one nopadding">
+            {% for i in range(10) %}
+            <div class="c-img" id="c-img">
+                <img id="resize-img" src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' />
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="col-lg two nopadding">
+            {% for i in range(10, 20) %}
+            <div class="c-img">
+                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' />
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="col-lg three nopadding">
+            {% for i in range(20, 30) %}
+            <div class="c-img">
+                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' />
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="col-lg nopadding">
+            {% for i in range(30, 40) %}
+            <div class="c-img">
+                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' />
+            </div>
+            {% endfor %}
+        </div>
+</div>
+{% endblock %}
+{% block bodyLinks %}
+<script src="{{ url_for('static', filename='js/imageScript.js') }}"></script>
 {% endblock %}

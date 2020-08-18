@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 {% block title %} Playlist {% endblock %}
-{% block content %}
 
+{% block headLinks %}
+<!-- Video.js -->
+<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoStyle.css')}}">
+{% endblock %}
+
+{% block content %}
 <div class="row">
     <div class="col-lg-8">
         <div class="c-video">
@@ -32,9 +39,12 @@
             </div>
             {% endfor %}
 
-            
-
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block bodyLinks %}
+<!-- Video.js -->
+<script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
 {% endblock %}

@@ -6,20 +6,18 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <!-- Video.js -->
-    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
-    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mainStyle.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoStyle.css')}}">
+
+    {% block headLinks %}
+    {% endblock %}
+
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-            <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-            Bootstrap
+            <img src="#" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            JTDev
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,8 +51,8 @@
         {% endblock %}
     </div>
     
-    <!-- Video.js -->
-    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+    {% block bodyLinks %}
+    {% endblock %}
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

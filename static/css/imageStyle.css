@@ -1,11 +1,35 @@
-#one {
-    width: 100px;
+body {
+    background-color: #F5F5F5;
 }
 
-#two {
-    width: 100px;
+.row {
+    border: 3px solid greenyellow;
+    margin: 5% 10% 1% 10%;
 }
 
-#three {
-    width: 100px;
+.col {
+    border: 3px solid red;
+}
+
+.c-img {
+    margin-top: 2%;
+    border: 3px solid rgb(0, 38, 255);
+}
+
+.c-img img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.c-img img:active {
+    border: 3px solid red;
+}
+
+.one, .two, .three {
+    margin-right: 0.5%;
+}
+
+.nopadding {
+    padding: 0 !important;
 }
