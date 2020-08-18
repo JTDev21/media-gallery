@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-8">
+    <div class="col-lg-8">
         <div class="c-video">
             <video id="current-video" class="video-js" controls preload="auto" type='video/mp4' poster="{{ url_for('static', filename='posters/7313.jpg') }}" data-setup='{"fluid": true}'>
                 <source src="{{ url_for('static', filename='videos/vid.mp4') }}" />
@@ -16,7 +16,7 @@
             </video>
         </div>
     </div>
-    <div class="col-4">
+    <div class="col-lg-4">
         <div class="c-playlist">
             {% for i in range(10) %}
             <div class="v-display">
