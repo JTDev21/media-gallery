@@ -11,7 +11,5 @@
 }
 
 .my-container {
-    display: flex;
-    justify-items: center;
     border: 3px solid red;
 }

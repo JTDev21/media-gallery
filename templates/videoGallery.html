@@ -2,20 +2,38 @@
 {% block title %} Playlist {% endblock %}
 {% block content %}
 
-<div class="c-video">
-    <video id="current-video" class="video-js" controls preload="auto" type='video/mp4' poster="{{ url_for('static', filename='posters/7313.jpg') }}" data-setup='{"fluid": true}'>
-        <source src="{{ url_for('static', filename='videos/vid.mp4') }}" />
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a
-            web browser that
-            <a href="https://videojs.com/html5-video-support/" target="_blank"
-                >supports HTML5 video</a>
-        </p>
-    </video>
+<div class="row">
+    <div class="col-8">
+        <div class="c-video">
+            <video id="current-video" class="video-js" controls preload="auto" type='video/mp4' poster="{{ url_for('static', filename='posters/7313.jpg') }}" data-setup='{"fluid": true}'>
+                <source src="{{ url_for('static', filename='videos/vid.mp4') }}" />
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a
+                    web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank"
+                        >supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="c-playlist">
+            {% for i in range(10) %}
+            <div class="v-display">
+                <img class="center" src="{{url_for('static', filename='posters/7313.jpg') }}" />
+                <div class="v-info">
+                    <span>Video Info and poster image</span>
+                </div>
+            </div>
+            {% endfor %}
+
+            
+
+        </div>
+    </div>
 </div>
+
     
-<div class="c-playlist">
-    <img class="center" src="{{url_for('static', filename='posters/7313.jpg') }}" />
-</div>
+
 
 {% endblock %}
