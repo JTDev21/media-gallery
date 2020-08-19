@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+from flask_jsglue import JSGlue
 import os
 
 video_path = []
@@ -13,6 +14,7 @@ for root, dirs, files in os.walk('static/images'):
 
 app = Flask(__name__)
 app.static_folder = 'static'
+_jsglue = JSGlue(app)
 
 @app.route("/")
 @app.route("/home")
@@ -25,7 +27,7 @@ def videoPlaylist():
 
 @app.route("/photoGallery")
 def photoGallery():
-    return render_template("photoGallery.html", imagePaths=image_path)
+    return render_template("photoGallery.html", imagePaths=image_path, jsglue=_jsglue)
 
 if __name__ == "__main__":
     app.run(host="localhost", port=8000, debug=True)

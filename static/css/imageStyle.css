@@ -43,7 +43,7 @@ body {
 #c-image-display {
     display: none;
     
-    height: 100%;
+    height: 50%;
 
     /* Center and scale the image nicely */
     background-position: center;

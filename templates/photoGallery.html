@@ -2,6 +2,7 @@
 {% block title %}Photo Gallery{% endblock %}
 {% block headLinks %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/imageStyle.css') }}">
+{{ JSGlue.include() }}
 
 {% endblock %}
 
@@ -12,8 +13,8 @@
 <div id="masonary-gallery" class="row">
         <div class="col-lg one nopadding">
             {% for i in range(2) %}
-            <div class="c-img" id="c-img">
-                <img onclick="expandImg(this)" id="resize-img" src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' />
+            <div class="c-img">
+                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
             </div>
             {% endfor %}
         </div>
@@ -21,7 +22,7 @@
         <div class="col-lg two nopadding">
             {% for i in range(2, 4) %}
             <div class="c-img">
-                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' />
+                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
             </div>
             {% endfor %}
         </div>
@@ -29,7 +30,7 @@
         <div class="col-lg three nopadding">
             {% for i in range(4, 6) %}
             <div class="c-img">
-                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' />
+                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
             </div>
             {% endfor %}
         </div>
@@ -37,7 +38,7 @@
         <div class="col-lg nopadding">
             {% for i in range(8, 10) %}
             <div class="c-img">
-                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' />
+                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
             </div>
             {% endfor %}
         </div>
