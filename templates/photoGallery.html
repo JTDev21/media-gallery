@@ -7,12 +7,15 @@
 {% endblock %}
 
 {% block content %}
+
 <div id="c-image-display">
-    <img id="enlarge-display" alt="¯\_(ツ)_/¯">
+    <img id="enlarge-display" alt="¯\_(ツ)_/¯" />
 </div>
+
+
 <div id="masonary-gallery" class="row">
         <div class="col-lg one nopadding">
-            {% for i in range(2) %}
+            {% for i in range(10) %}
             <div class="c-img">
                 <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
             </div>
@@ -20,7 +23,7 @@
         </div>
 
         <div class="col-lg two nopadding">
-            {% for i in range(2, 4) %}
+            {% for i in range(10, 20) %}
             <div class="c-img">
                 <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
             </div>
@@ -28,7 +31,7 @@
         </div>
         
         <div class="col-lg three nopadding">
-            {% for i in range(4, 6) %}
+            {% for i in range(20, 30) %}
             <div class="c-img">
                 <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
             </div>
@@ -36,7 +39,7 @@
         </div>
         
         <div class="col-lg nopadding">
-            {% for i in range(8, 10) %}
+            {% for i in range(30, 40) %}
             <div class="c-img">
                 <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
             </div>
