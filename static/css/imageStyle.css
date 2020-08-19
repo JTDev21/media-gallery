@@ -33,3 +33,33 @@ body {
 .nopadding {
     padding: 0 !important;
 }
+
+.blurBackground {
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+#c-image-display {
+    display: none;
+    
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin: 0% 10% 0% 10%;
+    
+    border: 3px solid rgb(0, 255, 34);
+}
+
+#c-image-display img {
+    display: block;
+    margin: 0 auto;
+
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+}
