@@ -3,17 +3,24 @@ body {
 }
 
 .row {
-    border: 3px solid greenyellow;
-    margin: 5% 10% 1% 10%;
+    /* border: 3px solid greenyellow; */
+    margin: 1% 10% 0.5% 10%;
+    /* margin: 0% 0.5% 1% 0.5%; */
 }
 
-.col {
+/* .col {
     border: 3px solid red;
+} */
+
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    width: 50%;
 }
 
 .c-img {
     margin-top: 2%;
-    border: 3px solid rgb(0, 38, 255);
+    /* border: 3px solid rgb(0, 38, 255); */
 }
 
 .c-img img {
@@ -55,11 +62,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
 
     /* margin: 0% 10% 0% 10%; */
     
-    border: 3px solid rgb(0, 255, 34);
+    /* border: 3px solid rgb(0, 255, 34); */
 }
 
 #c-image-display img {

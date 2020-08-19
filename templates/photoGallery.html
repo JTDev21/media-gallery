@@ -12,39 +12,42 @@
     <img id="enlarge-display" alt="¯\_(ツ)_/¯" />
 </div>
 
+<!-- <div id="masonary-gallery" class="row">
+    <h1 id="masonary-gallery" style="display: block; margin: 0 auto;">Album Name</h1>
+</div> -->
 
 <div id="masonary-gallery" class="row">
-        <div class="col-lg one nopadding">
-            {% for i in range(10) %}
-            <div class="c-img">
-                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
-            </div>
-            {% endfor %}
+    <div class="col one nopadding">
+        {% for i in range(10) %}
+        <div class="c-img">
+            <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
         </div>
+        {% endfor %}
+    </div>
 
-        <div class="col-lg two nopadding">
-            {% for i in range(10, 20) %}
-            <div class="c-img">
-                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
-            </div>
-            {% endfor %}
+    <div class="col-sm two nopadding">
+        {% for i in range(10, 20) %}
+        <div class="c-img">
+            <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
         </div>
-        
-        <div class="col-lg three nopadding">
-            {% for i in range(20, 30) %}
-            <div class="c-img">
-                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
-            </div>
-            {% endfor %}
+        {% endfor %}
+    </div>
+    
+    <div class="col-md three nopadding">
+        {% for i in range(20, 30) %}
+        <div class="c-img">
+            <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
         </div>
-        
-        <div class="col-lg nopadding">
-            {% for i in range(30, 40) %}
-            <div class="c-img">
-                <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
-            </div>
-            {% endfor %}
+        {% endfor %}
+    </div>
+    
+    <div class="col-lg nopadding">
+        {% for i in range(30, 40) %}
+        <div class="c-img">
+            <img src="{{ url_for('static', filename=imagePaths[i]) }}" alt='oof' onclick="expandImg(); displayImg(this);" />
         </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
 {% block bodyLinks %}
