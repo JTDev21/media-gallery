@@ -20,7 +20,7 @@ hr.solid {
 
 .c-img {
     margin-top: 2%;
-    /* border: 3px solid rgb(0, 38, 255); */
+    border: 3px solid rgb(0, 38, 255);
 }
 
 .c-img img {
@@ -47,24 +47,23 @@ hr.solid {
     -webkit-filter: blur(8px);
 }
 
-#c-image-display {
+#c-media {
     display: none;
+}
 
+#c-image-display {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
 
     z-index: 10;
-
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: rgba(0, 0, 0, 0.7); */
-
-    /* margin: 0% 10% 0% 10%; */
     
     /* border: 3px solid rgb(0, 255, 34); */
 }

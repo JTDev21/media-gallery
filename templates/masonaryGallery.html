@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block title %}Photo Gallery{% endblock %}
+{% block headLinks %}
+<!-- Video.js -->
+<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoJS.css')}}">
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/imageStyle.css') }}">
+{{ JSGlue.include() }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div id="c-media">
+    <!-- <div id="c-image-display">
+        <img id="enlarge-img" alt="¯\_(ツ)_/¯" />
+    </div> -->
+
+    <div id="c-video-display">
+        <video class="video-js" controls preload="auto" type='video/mp4' poster="{{ url_for('static', filename='posters/7313.jpg') }}" data-setup='{}'>
+            <source id="video-src" src="{{ url_for('static', filename='media_files/MV.mp4') }}" />
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank"
+                    >supports HTML5 video</a>
+            </p>
+        </video>
+    </div>
+</div>
+
+<!-- <div id="masonary-gallery" class="row">
+    <h1 id="masonary-gallery" style="display: block; margin: 0 auto;">Album Name</h1>
+</div> -->
+
+<div id="masonary-gallery" class="row">
+    <div class="col one nopadding">
+        {% for i in range(2) %}
+        {% if mediaEXT[i] == 'image' %}
+            <div class="c-img">
+                <img src="{{ url_for('static', filename=mediaFiles[i]) }}" alt='oof' onclick="viewer(this);" />
+            </div>
+            {% elif mediaEXT[i] == 'video' %}
+            <div class="video-container nopadding" id="video-container">
+                <div class="c-video-masonary">
+                    <video id="play-pause-masonary-vid" preload="auto" src="{{ url_for('static', filename=mediaFiles[i]) }}" ondblclick="viewer(this);"></video>
+                </div>
+                <div class="controls">
+                    <button id='play-pause'></button>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="col-sm two nopadding">
+        {% for i in range(2, 4) %}
+        {% if mediaEXT[i] == 'image' %}
+            <div class="c-img">
+                <img src="{{ url_for('static', filename=mediaFiles[i]) }}" alt='oof' onclick="viewer(this);" />
+            </div>
+            {% elif mediaEXT[i] == 'video' %}
+            <div class="video-container nopadding" id="video-container">
+                <div class="c-video-masonary">
+                    <video id="play-pause-masonary-vid" preload="auto" src="{{ url_for('static', filename=mediaFiles[i]) }}" ondblclick="viewer(this);"></video>
+                </div>
+                <div class="controls">
+                    <button id='play-pause'></button>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <div class="col-md three nopadding">
+        {% for i in range(4, 6) %}
+        {% if mediaEXT[i] == 'image' %}
+            <div class="c-img">
+                <img src="{{ url_for('static', filename=mediaFiles[i]) }}" alt='oof' onclick="viewer(this);" />
+            </div>
+            {% elif mediaEXT[i] == 'video' %}
+            <div class="video-container nopadding" id="video-container">
+                <div class="c-video-masonary">
+                    <video id="play-pause-masonary-vid" preload="auto" src="{{ url_for('static', filename=mediaFiles[i]) }}" ondblclick="viewer(this);"></video>
+                </div>
+                <div class="controls">
+                    <button id='play-pause'></button>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <div class="col-lg nopadding">
+        {% for i in range(6, 8) %}
+        {% if mediaEXT[i] == 'image' %}
+            <div class="c-img">
+                <img src="{{ url_for('static', filename=mediaFiles[i]) }}" alt='oof' onclick="viewer(this);" />
+            </div>
+            {% elif mediaEXT[i] == 'video' %}
+            <div class="video-container nopadding" id="video-container">
+                <div class="c-video-masonary">
+                    <video id="play-pause-masonary-vid" preload="auto" src="{{ url_for('static', filename=mediaFiles[i]) }}" ondblclick="viewer(this);"></video>
+                </div>
+                <div class="controls">
+                    <button id='play-pause'></button>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+{% block bodyLinks %}
+<script src="{{ url_for('static', filename='js/imageScript.js') }}"></script>
+
+<!-- Video.js -->
+<script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+{% endblock %}

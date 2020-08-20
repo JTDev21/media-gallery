@@ -2,9 +2,6 @@
 {% block title %} Playlist {% endblock %}
 
 {% block headLinks %}
-<!-- Video.js -->
-<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
-<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoStyle.css')}}">
 {% endblock %}
 
@@ -12,15 +9,7 @@
 <div class="row">
     <div class="col-lg-8">
         <div class="c-video">
-            <video id="current-video" class="video-js" controls preload="auto" type='video/mp4' poster="{{ url_for('static', filename='posters/7313.jpg') }}" data-setup='{"fluid": true}'>
-                <source src="{{ url_for('static', filename='videos/vid.mp4') }}" />
-                <p class="vjs-no-js">
-                    To view this video please enable JavaScript, and consider upgrading to a
-                    web browser that
-                    <a href="https://videojs.com/html5-video-support/" target="_blank"
-                        >supports HTML5 video</a>
-                </p>
-            </video>
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/aYi7hHWG7zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
     <div class="col-lg-4">
@@ -45,6 +34,5 @@
 {% endblock %}
 
 {% block bodyLinks %}
-<!-- Video.js -->
-<script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+
 {% endblock %}
