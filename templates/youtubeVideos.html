@@ -6,15 +6,15 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-lg-8">
+<div class="row no-margin">
+    <div class="col-lg-9">
         <div class="c-video">
-            <iframe width="1000" height="500" src="https://www.youtube.com/embed/aYi7hHWG7zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="current-video" src="https://www.youtube.com/embed/aYi7hHWG7zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-3">
         <div class="c-playlist">
-            {% for i in range(10) %}
+            {% for i in range(20) %}
             <div class="v-display">
                 <img class="center" src="{{url_for('static', filename='posters/7313.jpg') }}" />
                 <div class="v-info">

@@ -25,7 +25,7 @@ for root, dirs, files in os.walk('static/media_files'):
             if (media_ext == ext):
                 media_ext_type.append('image')
 
-
+# print(media_filepaths)
 # print("media_filepaths", len(media_filepaths))
 # print("media_ext_type", len(media_ext_type))
 

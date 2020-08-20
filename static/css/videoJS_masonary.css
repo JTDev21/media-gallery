@@ -1,7 +1,11 @@
 #c-video-display {
-    position: absolute;
-    top: 0%;
-    left: 0%;
+    display: flex;
+    align-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
     z-index: 10;
 
     width: 100%;
@@ -10,7 +14,13 @@
     border: 3px solid rgb(0, 255, 34);
 }
 
+#c-video-display .video-js {
+    display: block; 
+	margin: 0 auto;
 
+    width: 75%;
+    height: 75%;
+}
 
 
 .video-container {
@@ -63,10 +73,7 @@
     transition: all 0.5s;
 }
 /* ----------------------------- Video.js ----------------------------- */
-#c-video-display .video-js {
-    width: 75%;
-    height: 75%;
-
+.video-js {
     font-size: 10px;
     color: #fff;
 }

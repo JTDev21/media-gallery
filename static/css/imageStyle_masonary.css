@@ -8,14 +8,16 @@ body {
     /* margin: 0% 0.5% 1% 0.5%; */
 }
 
-/* .col {
-    border: 3px solid red;
-} */
+.one, .two, .three {
+    margin-right: 0.5%;
+}
 
+.nopadding {
+    padding: 0 !important;
+}
 
-hr.solid {
-    border-top: 3px solid #bbb;
-    width: 50%;
+.no-scroll {
+    overflow: hidden;
 }
 
 .c-img {
@@ -29,17 +31,7 @@ hr.solid {
     height: 100%;
 }
 
-.one, .two, .three {
-    margin-right: 0.5%;
-}
 
-.nopadding {
-    padding: 0 !important;
-}
-
-.no-scroll {
-    overflow: hidden;
-}
 
 .blurBackground {
     /* Add the blur effect */

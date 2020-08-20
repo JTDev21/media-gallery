@@ -8,10 +8,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoJS.css')}}">
 
-
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/imageStyle.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoJS_masonary.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/imageStyle_masonary.css') }}">
 {{ JSGlue.include() }}
 
 {% endblock %}
@@ -20,13 +19,13 @@
 
 
 <div id="c-media">
-    <!-- <div id="c-image-display">
+    <div id="c-image-display">
         <img id="enlarge-img" alt="¯\_(ツ)_/¯" />
-    </div> -->
+    </div>
 
     <div id="c-video-display">
-        <video class="video-js" controls preload="auto" type='video/mp4' poster="{{ url_for('static', filename='posters/7313.jpg') }}" data-setup='{}'>
-            <source id="video-src" src="{{ url_for('static', filename='media_files/MV.mp4') }}" />
+        <video id="video-player" class="video-js" controls preload="auto" type='video/mp4' poster="{{ url_for('static', filename='posters/7313.jpg') }}" data-setup='{}'>
+            <source id="video-src" src="{{ url_for('static', filename='videos/vid.mp4') }}" />
             <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a
                 web browser that
@@ -37,9 +36,6 @@
     </div>
 </div>
 
-<!-- <div id="masonary-gallery" class="row">
-    <h1 id="masonary-gallery" style="display: block; margin: 0 auto;">Album Name</h1>
-</div> -->
 
 <div id="masonary-gallery" class="row">
     <div class="col one nopadding">
