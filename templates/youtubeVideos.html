@@ -14,11 +14,13 @@
         </div>
     </div>
     <div class="col-lg-3">
-        <div class="c-playlist" id="scroller">
+        <div class="c-playlist" id="c-playlist">
 
+            
             <template id="post_template">
                 <div class="v-display">
-                    <img class="center" id="v-thumbnail" src="{{url_for('static', filename='posters/7313.jpg') }}" />
+                    <img class="center" id="v-thumbnail" src="https://img.youtube.com/vi/zCszs4cJ0DU/0.jpg" />
+
                     <div class="v-info">
                         <div class="playlist-video-title">
                             <span><b id="playlist-video-title"></b></span>
@@ -41,5 +43,6 @@
 {% endblock %}
 
 {% block bodyLinks %}
-<script src="{{ url_for('static', filename='js/loadingYT-videos.js') }}"></script>
+<script src="{{ url_for('static', filename='js/playlist/VG-video-loader.js') }}"></script>
+<script src="{{ url_for('static', filename='js/playlist/videoPlaylist.js') }}"></script>
 {% endblock %}

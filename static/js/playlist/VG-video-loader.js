@@ -1,12 +1,11 @@
 // Get references to the dom elements
-var scroller = document.querySelector("#scroller");
+var scroller = document.querySelector("#c-playlist");
 var template = document.querySelector('#post_template');
 var sentinel = document.querySelector('#sentinel');
 var counter = 0;
 
 // Function to request new items and render to the dom
 function loadItems() {
-    console.log('loading');
     // Use fetch to request data and pass the counter value in the QS
     fetch(`/load-yt?c=${counter}`).then((response) => {
 
@@ -26,7 +25,6 @@ function loadItems() {
         let template_clone = template.content.cloneNode(true);
 
         // Query & update the template content
-        console.log(data[i][1], data[i][2]);
         template_clone.querySelector("#playlist-video-title").innerHTML = data[i][1];
         template_clone.querySelector("#playlist-author").innerHTML = data[i][2];
 
@@ -49,7 +47,6 @@ var intersectionObserver = new IntersectionObserver(entries => {
 
     // Call the loadItems function
     loadItems();
-
 });
 
 // Instruct the IntersectionObserver to watch the sentinel
