@@ -3,6 +3,7 @@
 
 {% block headLinks %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoStyle.css')}}">
+
 {% endblock %}
 
 {% block content %}
@@ -13,26 +14,32 @@
         </div>
     </div>
     <div class="col-lg-3">
-        <div class="c-playlist">
-            {% for i in range(20) %}
-            <div class="v-display">
-                <img class="center" src="{{url_for('static', filename='posters/7313.jpg') }}" />
-                <div class="v-info">
-                    <div class="playlist-video-title">
-                        <span><b>Python Flask Tutorial: Full-Featured Web App Part 2 - Templates</b></span>
-                    </div>
-                    <div class="playlist-author">
-                        <span>Joshua Truong</span>
+        <div class="c-playlist" id="scroller">
+
+            <template id="post_template">
+                <div class="v-display">
+                    <img class="center" id="v-thumbnail" src="{{url_for('static', filename='posters/7313.jpg') }}" />
+                    <div class="v-info">
+                        <div class="playlist-video-title">
+                            <span><b id="playlist-video-title"></b></span>
+                        </div>
+                        <div class="playlist-author">
+                            <span id="playlist-author">Joshua Truong</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            {% endfor %}
+            </template>
 
+        </div>
+
+        <!-- element to trigger the IntersectionObserver -->
+        <div class="d-flex justify-content-center mb-3" id="sentinel">
+        <div class="spinner-border" role="status"></div>
         </div>
     </div>
 </div>
 {% endblock %}
 
 {% block bodyLinks %}
-
+<script src="{{ url_for('static', filename='js/loadingYT-videos.js') }}"></script>
 {% endblock %}
